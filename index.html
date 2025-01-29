@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе с доставкой еды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Добро пожаловать в наше кафе!</h1>
+        <p>Мы предлагаем вкусные блюда и доставку на дом.</p>
+        <div class="special-offers">
+            <h2>Специальные предложения</h2>
+            <ul>
+                <li>Скидка 10% на первые заказы!</li>
+                <li>Акция: Бесплатная доставка при заказе от 1500 рублей.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Наше меню</h2>
+        <div class="menu-category">
+            <h3>Салаты</h3>
+            <div class="menu-item">
+                <img src="salad.jpg" alt="Салат Цезарь">
+                <p>Салат Цезарь - 350 ₽</p>
+                <button onclick="addToCart('Салат Цезарь', 350)">Добавить в корзину</button>
+            </div>
+        </div>                   
+            
+        
+        
+        <!-- Категория: Основные блюда -->
+            <div class="menu-category">
+                <h3>Основные блюда</h3>
+                <div class="menu-item">
+                    <img src="main_dish1.jpg" alt="Борщ">
+                    <p>Борщ с пампушками - 250 ₽</p>
+                    <button onclick="addToCart('Борщ с пампушками', 250)">Добавить в корзину</button>
+                </div>
+                <div class="menu-item">
+                    <img src="main_dish2.jpg" alt="Котлета по-киевски">
+                    <p>Котлета по-киевски с картошкой - 450 ₽</p>
+                    <button onclick="addToCart('Котлета по-киевски с картошкой', 450)">Добавить в корзину</button>
+                </div>
+            </div>
+        
+            
+            
+            
+            <!-- Категория: Напитки -->
+            <div class="menu-category">
+                <h3>Напитки</h3>
+                <div class="menu-item">
+                    <img src="drink1.jpg" alt="Сок апельсиновый">
+                    <p>Сок апельсиновый - 120 ₽</p>
+                    <button onclick="addToCart('Сок апельсиновый', 120)">Добавить в корзину</button>
+                </div>
+                <div class="menu-item">
+                    <img src="drink2.jpg" alt="Минеральная вода">
+                    <p>Минеральная вода - 80 ₽</p>
+                    <button onclick="addToCart('Минеральная вода', 80)">Добавить в корзину</button>
+                </div>
+            </div>
+        
+           
+           
+           
+            <!-- Категория: Десерты -->
+            <div class="menu-category">
+                <h3>Десерты</h3>
+                <div class="menu-item">
+                    <img src="dessert1.jpg" alt="Торт шоколадный">
+                    <p>Торт шоколадный - 350 ₽</p>
+                    <button onclick="addToCart('Торт шоколадный', 350)">Добавить в корзину</button>
+                </div>
+                <div class="menu-item">
+                    <img src="dessert2.jpg" alt="Чизкейк">
+                    <p>Чизкейк с ягодами - 300 ₽</p>
+                    <button onclick="addToCart('Чизкейк с ягодами', 300)">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+        
+
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Наше кафе основано в 2020 году. Мы готовим свежие блюда с любовью и заботой о каждом клиенте.</p>
+        <p>Адрес: ул. Примерная, 10</p>
+        <p>Часы работы: Пн-Вс с 10:00 до 22:00</p>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <form id="contactForm">
+            <label for="message">Ваше сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="map">
+            <!-- Карта будет вставлена позже -->
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Общая сумма: 0 ₽</p> <!-- Здесь будет отображаться общая сумма -->
+        <button onclick="checkout()">Оформить заказ</button>
+        <button onclick="clearCart()">Очистить корзину</button>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Кафе с доставкой еды</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
